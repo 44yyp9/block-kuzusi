@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class map_start_object_genator : MonoBehaviour
 {
-    public int[,] map_form; //マップの二次元配列
+    public static int[,] map_form; //マップの二次元配列
 
     [SerializeField] int map_xrange = 10; //マップのx座標
     [SerializeField] int map_yrange = 18; //マップのy座標
@@ -98,3 +98,5 @@ public class map_start_object_genator : MonoBehaviour
         return map_draw;
     }
 }
+
+
