@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Threading.Tasks;
 
-public class map_update_object : MonoBehaviour
+public class Map_update_object : MonoBehaviour
 {
     //playerは10　enemyは-10 wallは1　何もないスペースは0
     public static int[,] map_formupdate; //マップの状況取得する値
@@ -14,7 +14,7 @@ public class map_update_object : MonoBehaviour
     {
         while (map_formupdate == null)
         {
-            map_formupdate = map_start_object_genator.map_form;
+            map_formupdate = Map_start_object_genator.map_form;
             await Task.Delay(1);
         }
     }

@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class enemy_generator : MonoBehaviour
+public class Enemy_generator : MonoBehaviour
 {
     //playerは10　enemyは-10 wallは1　何もないスペースは0
     
