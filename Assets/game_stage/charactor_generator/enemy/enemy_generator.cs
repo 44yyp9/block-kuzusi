@@ -26,7 +26,7 @@ public class Enemy_generator : MonoBehaviour
         }
         return empty_map_area;
     }
-    public static void enemygenerateInstantiate(GameObject enemy, int x,int y,Transform parent)
+    public static void enemygenerateInstantiate(GameObject enemy, int x,int y,Transform parent)　//マップ上にオブジェクトを出現させるメソッド
     {
         x = x - 9;
         y = y - 5;
