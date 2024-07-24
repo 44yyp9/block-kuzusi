@@ -50,10 +50,12 @@ public class Enemy_move : MonoBehaviour
                     canmove_list.Add(posi_list);
                 }
             }
+            //ƒ|ƒWƒVƒ‡ƒ“‚ÌŽæ“¾
             for(int num = 0; num < moving_count0; num++) add_movelist(enemyposi_x, enemyposi_y + 1, 90, -1);
             for (int num = 0; num < moving_count1; num++) add_movelist(enemyposi_x, enemyposi_y - 1, 90, 1);
             for (int num = 0; num < moving_count2; num++) add_movelist(enemyposi_x + 1, enemyposi_y, 0, -1);
             for (int num = 0; num < moving_count3; num++) add_movelist(enemyposi_x - 1, enemyposi_y, 0, 1);
+            //
             int moveRange = canmove_list.Count;
             var moveRandom=Random.Range(0, moveRange);
             var movingDirections = canmove_list[moveRandom];
