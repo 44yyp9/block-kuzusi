@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class enemy_AI_move : MonoBehaviour
+public class Test_script : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()

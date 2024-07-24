@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class generate_hole : MonoBehaviour
+public class Generate_hole : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()

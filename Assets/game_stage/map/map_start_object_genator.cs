@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class map_start_object_genator : MonoBehaviour
+public class Map_start_object_genator : MonoBehaviour
 {
     public static int[,] map_form; //マップの二次元配列
 
