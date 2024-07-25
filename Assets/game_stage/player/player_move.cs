@@ -4,32 +4,28 @@ using UnityEngine;
 
 public class Player_move : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
-        
+        isplayer_moving(KeyCode.RightArrow, 1, 0, 0, -1);
+        isplayer_moving(KeyCode.LeftArrow, -1, 0, 0, 1);
+        isplayer_moving(KeyCode.UpArrow, 0, 1, 90, 1);
+        isplayer_moving(KeyCode.DownArrow, 0, -1, 90, -1);
     }
-    private void isplayer_moving(string keycode,int x,int y)
+    private void isplayer_moving(KeyCode key,int transform_x,int transform_y,int rorate,int scale)
     {
-        if (x == 0 || x == -1 || x == 1) return;
-        if (y == 0 || y == -1 || y == 1) return;
-        KeyCode key = (KeyCode)System.Enum.Parse(typeof(KeyCode), keycode);
-        if (Input.GetKey(key))
+        //èoóàÇÍÇŒtransform_x,yÇÃÉKÅ[ÉhêﬂÇì¸ÇÍÇΩÇ¢
+        if (Input.GetKeyDown(key))
         {
             var mapform = Map_update_object.map_formupdate;
             var player_mapposi = Mapposition.isMapposition((int)transform.position.x, (int)transform.position.y);
             var mapposi_x = player_mapposi[0];
             var mapposi_y= player_mapposi[1];
-            if (mapform[mapposi_x+x, mapposi_y+y] != Map_update_object.wall_num)
+            if (mapform[mapposi_x+transform_x, mapposi_y+transform_y] != Map_update_object.wall_num)
             {
-                var plaer_transform_posi = Mapposition.isUnityposition(mapposi_x + x, mapposi_y + y);
+                var plaer_transform_posi = Mapposition.isUnityposition(mapposi_x + transform_x, mapposi_y + transform_y);
                 transform.position = plaer_transform_posi;
+                transform.rotation = Quaternion.Euler(0, 0, rorate);
+                transform.localScale = new Vector3((float)scale * 0.5f, 0.5f, 1);
             }
         }
     }
