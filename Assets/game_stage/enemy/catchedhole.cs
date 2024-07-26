@@ -2,17 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Eatchedhole : MonoBehaviour
+public class Catchedhole : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public static void catched_hole()
     {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

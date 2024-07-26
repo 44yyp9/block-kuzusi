@@ -34,7 +34,6 @@ public class Enemy_move : MonoBehaviour
             var enemyposi_y = gameobject_posi[1];
             //“ñŽŸŒ³”z—ñ‚ÌŽæ“¾
             var mapform = Map_update_object.map_formupdate;
-            //mapform[enemyposi_x, enemyposi_y] = Map_update_object.enemy_num;
             var wallspace = Map_update_object.wall_num;
             var canmove_list = new List<List<int>>();
             void add_movelist(int posix,int posiy,int rotate_direction,int enemy_direction)
