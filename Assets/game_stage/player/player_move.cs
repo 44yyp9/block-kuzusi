@@ -26,7 +26,6 @@ public class Player_move : MonoBehaviour
                 transform.position = plaer_transform_posi;
                 transform.rotation = Quaternion.Euler(0, 0, rorate);
                 transform.localScale = new Vector3((float)scale * 0.5f, 0.5f, 1);
-                Debug.Log("scusec");
             }
         }
     }
