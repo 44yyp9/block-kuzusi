@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Enemy_start_generator : MonoBehaviour
 {
-    public static int nunmberofenemy = 3; //“ïˆÕ“x‚É‚æ‚Á‚Ä“G‚Ì”‚ğ•Ï‚¦‚é‚½‚ß
+    public static int nunmberofenemy = 0; //“ïˆÕ“x‚É‚æ‚Á‚Ä“G‚Ì”‚ğ•Ï‚¦‚é‚½‚ß
 
     [SerializeField] GameObject enemy;  //¢Š«‚·‚é“G
 
@@ -30,7 +30,7 @@ public class Enemy_start_generator : MonoBehaviour
             var enempty_coordinate = generate_emepty_area[random_area];
             int coordinatex = enempty_coordinate[0];
             int coordinatey = enempty_coordinate[1];
-            Map_update_object.map_formupdate[coordinatex,coordinatey] = -10;
+            Map_update_object.map_formupdate[coordinatex, coordinatey] = Map_update_object.enemy_num;
             Enemy_generator.enemygenerateInstantiate(enemy, coordinatex, coordinatey, this.transform);
         }
     }

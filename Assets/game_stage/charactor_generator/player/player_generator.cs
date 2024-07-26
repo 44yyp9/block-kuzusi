@@ -26,7 +26,7 @@ public class Player_generator : MonoBehaviour
         var enempty_coordinate = generate_emepty_area[random_area];
         int coordinatex = enempty_coordinate[0];
         int coordinatey = enempty_coordinate[1];
-        Map_update_object.map_formupdate[coordinatex, coordinatey] = -10;
+        //Map_update_object.map_formupdate[coordinatex, coordinatey] = Map_update_object.play_num;
         Enemy_generator.enemygenerateInstantiate(player, coordinatex, coordinatey, this.transform);
     }
 }
