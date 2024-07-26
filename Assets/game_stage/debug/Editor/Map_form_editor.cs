@@ -19,6 +19,10 @@ public class Map_form_editor : EditorWindow
         EditorWindow.GetWindow<Map_form_editor>(title: "Mapwindow");
 
     }
+    private void Update()
+    {
+        Repaint();
+    }
     private async void OnGUI()
     {
         await maptask();
