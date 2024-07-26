@@ -63,11 +63,13 @@ public class Map_form_editor : EditorWindow
                 if(y!=0) posi_y += 15;
                 mapnum = mapform[x,y];
                 create_numbercolor(0, Color.white);
-                create_numbercolor(-10, Color.red);
+                create_numbercolor(Map_update_object.enemy_num, Color.red);
                 create_numbercolor(1, Color.black);
-                create_numbercolor(10, Color.blue);
-                //Rect rect = new Rect(posi_x, posi_y, 20, 15);
-                //GUI.Label(rect, mapnum.ToString());
+                create_numbercolor(Map_update_object.play_num, Color.blue);
+                create_numbercolor(Map_update_object.hole_num, Color.yellow);
+                create_numbercolor(Map_update_object.hole_size_4_num, Color.yellow);
+                create_numbercolor(Map_update_object.hole_size_3_num, Color.yellow);
+                create_numbercolor(Map_update_object.hole_size_2_num, Color.yellow);
             }
         }
         void create_numbercolor(int num,Color color) //èÍçáï™ÇØÇ∆ÇªÇÃÇ∆Ç´ÇÃêFÇÃàµÇ¢

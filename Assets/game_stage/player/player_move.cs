@@ -20,10 +20,13 @@ public class Player_move : MonoBehaviour
             var player_mapposi = Mapposition.isMapposition((int)transform.position.x, (int)transform.position.y);
             var mapposi_x = player_mapposi[0];
             var mapposi_y= player_mapposi[1];
+            if (mapform[mapposi_x + transform_x, mapposi_y + transform_y] == Map_update_object.hole_num || mapform[mapposi_x + transform_x, mapposi_y + transform_y] == Map_update_object.hole_size_2_num || mapform[mapposi_x + transform_x, mapposi_y + transform_y] == Map_update_object.hole_size_3_num || mapform[mapposi_x + transform_x, mapposi_y + transform_y] == Map_update_object.hole_size_4_num)
+                return; //ëÅä˙ÉäÉ^Å[Éì
             if (mapform[mapposi_x+transform_x, mapposi_y+transform_y] != Map_update_object.wall_num)
             {
-                var plaer_transform_posi = Mapposition.isUnityposition(mapposi_x + transform_x, mapposi_y + transform_y);
-                transform.position = plaer_transform_posi;
+                var player_transform_posi = Mapposition.isUnityposition(mapposi_x + transform_x, mapposi_y + transform_y);
+                Charactor_moving_map.ischaractor_moving_map(gameObject.transform.position, player_transform_posi, Map_update_object.play_num);
+                transform.position = player_transform_posi;
                 transform.rotation = Quaternion.Euler(0, 0, rorate);
                 transform.localScale = new Vector3((float)scale * 0.5f, 0.5f, 1);
             }

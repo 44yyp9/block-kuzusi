@@ -62,6 +62,7 @@ public class Enemy_move : MonoBehaviour
             var unityposi = Mapposition.isUnityposition(movingDirections[0], movingDirections[1]);
             var unityposi_x = unityposi.x;
             var unityposi_y = unityposi.y;
+            Charactor_moving_map.ischaractor_moving_map(transform.position, unityposi, Map_update_object.enemy_num);
             transform.position = new Vector2(unityposi_x, unityposi_y);
             transform.rotation = Quaternion.Euler(0, 0, movingDirections[2]);
             transform.localScale = new Vector3((float)movingDirections[3]*0.5f, 0.5f, 1);
