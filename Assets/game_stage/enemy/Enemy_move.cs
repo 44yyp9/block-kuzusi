@@ -34,6 +34,9 @@ public class Enemy_move : MonoBehaviour
             var enemyposi_y = gameobject_posi[1];
             //二次元配列の取得
             var mapform = Map_update_object.map_formupdate;
+            //もし自分(enemy)が穴に落ちてたら早期リターンを返すようにする。
+            if (mapform[enemyposi_x, enemyposi_y] == Map_update_object.hole_num|| mapform[enemyposi_x, enemyposi_y] == Map_update_object.hole_size_2_num || mapform[enemyposi_x, enemyposi_y] == Map_update_object.hole_size_3_num || mapform[enemyposi_x, enemyposi_y] == Map_update_object.hole_size_4_num) return;
+
             var wallspace = Map_update_object.wall_num;
             var canmove_list = new List<List<int>>();
             void add_movelist(int posix,int posiy,int rotate_direction,int enemy_direction)
