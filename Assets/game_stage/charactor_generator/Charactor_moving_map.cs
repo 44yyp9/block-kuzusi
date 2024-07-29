@@ -15,7 +15,8 @@ public class Charactor_moving_map : MonoBehaviour
         var map_feature_posi_y = map_feature_posi[1];
         
         //この追加はオブジェクト指向的に良くない
-        if (Map_update_object.map_formupdate[map_past_posi_x,map_past_posi_y] != Map_update_object.hole_num) Map_update_object.map_formupdate[map_past_posi_x, map_past_posi_y] = Map_update_object.nullspace_num;
+        if(Map_update_object.map_formupdate[map_past_posi_x, map_past_posi_y] == Map_update_object.wall_num) { }
+        else if (Map_update_object.map_formupdate[map_past_posi_x,map_past_posi_y] != Map_update_object.hole_num) Map_update_object.map_formupdate[map_past_posi_x, map_past_posi_y] = Map_update_object.nullspace_num;
         if(Map_update_object.map_formupdate[map_feature_posi_x, map_feature_posi_y]!=Map_update_object.hole_num) Map_update_object.map_formupdate[map_feature_posi_x, map_feature_posi_y] = charactor_num;
     }
 }
