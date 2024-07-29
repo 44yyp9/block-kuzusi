@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class Game_clear : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
-        
+        GameObject[] _enemy_tag = GameObject.FindGameObjectsWithTag("Enemy");
+        //早期リターンによってネストを浅くする
+        if (_enemy_tag.Length != 0) return;
+        //ゲームクリア時の処理
     }
+
 }
