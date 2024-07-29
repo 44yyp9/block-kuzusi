@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Threading.Tasks;
+using System.Diagnostics;
 
 public class Map_update_object : MonoBehaviour
 {
@@ -22,7 +23,8 @@ public class Map_update_object : MonoBehaviour
 
     async Task reAsync()
     {
-        while (map_formupdate == null)
+        //”ñ“¯Šúˆ—‚ÌŠT”O‚©‚ç‚â‚ç‚©‚µ‚Ä‚¢‚é‚Æv‚í‚ê‚é‚Ì‚ÅŒã‚ÉC³‚ª•K—v
+        while (Map_start_object_genator.game_start)
         {
             map_formupdate = Map_start_object_genator.map_form;
             await Task.Delay(1);

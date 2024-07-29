@@ -5,6 +5,7 @@ using UnityEngine;
 public class Map_start_object_genator : MonoBehaviour
 {
     public static int[,] map_form; //マップの二次元配列
+    public static bool game_start = false;
 
     [SerializeField] int map_xrange = 10; //マップのx座標
     [SerializeField] int map_yrange = 18; //マップのy座標
@@ -27,6 +28,8 @@ public class Map_start_object_genator : MonoBehaviour
                 }
             }
         }
+        game_start = true;
+        Debug.Log(game_start);
     }
     private int[,] map_start_generate() //迷路生成アルゴリズム
     {
