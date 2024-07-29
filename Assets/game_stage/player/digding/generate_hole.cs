@@ -19,7 +19,7 @@ public class Generate_hole : MonoBehaviour
             var player_mapposi = Mapposition.isMapposition((int)transform.position.x, (int)transform.position.y);
             var mapposi_x = player_mapposi[0];
             var mapposi_y = player_mapposi[1];
-            if (mapform[mapposi_x + transform_x, mapposi_y + transform_y] != Map_update_object.wall_num)
+            if (mapform[mapposi_x + transform_x, mapposi_y + transform_y] ==Map_update_object.nullspace_num|| mapform[mapposi_x + transform_x, mapposi_y + transform_y] == Map_update_object.enemy_num)
             {
                 generate_hole_to_map(mapposi_x + transform_x, mapposi_y + transform_y);
                 generate_hole_to_unity(mapposi_x + transform_x, mapposi_y + transform_y);

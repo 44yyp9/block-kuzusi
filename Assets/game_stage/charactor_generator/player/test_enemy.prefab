@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6856392278884134587}
   - component: {fileID: -8650135829907110410}
   - component: {fileID: 1072182127680142197}
+  - component: {fileID: 9197453131527492667}
   m_Layer: 0
   m_Name: test_enemy
   m_TagString: Untagged
@@ -111,3 +112,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hole: {fileID: 8692011121963011421, guid: a3b58268d1cda42408895534fc7f3e3f, type: 3}
+--- !u!114 &9197453131527492667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7994020128922366179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 376984679872ec04b97db7f4f8042121, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
