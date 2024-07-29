@@ -244,7 +244,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe70645241aaa2848ac81f4d43648740, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scene_name: 
+  scene_name: SampleScene
 --- !u!114 &797955015
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -292,7 +292,7 @@ MonoBehaviour:
       - m_Target: {fileID: 797955014}
         m_TargetAssemblyTypeName: Game_change_scene, Assembly-CSharp
         m_MethodName: change_scene
-        m_Mode: 5
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -351,6 +351,7 @@ GameObject:
   - component: {fileID: 804455693}
   - component: {fileID: 804455692}
   - component: {fileID: 804455691}
+  - component: {fileID: 804455694}
   m_Layer: 5
   m_Name: EXIT
   m_TagString: Untagged
@@ -422,7 +423,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 804455692}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 804455694}
+        m_TargetAssemblyTypeName: Game_exit, Assembly-CSharp
+        m_MethodName: exit_game
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &804455692
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -461,6 +474,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 804455689}
   m_CullTransparentMesh: 1
+--- !u!114 &804455694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 804455689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c648ba0d8b26a6540b347001de1c3b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1120376666
 GameObject:
   m_ObjectHideFlags: 0
