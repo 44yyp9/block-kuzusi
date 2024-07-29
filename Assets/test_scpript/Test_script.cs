@@ -4,21 +4,26 @@ using UnityEngine;
 
 public class Test_script : MonoBehaviour
 {
-    float time;
+    private bool boolean_game_strat = false;
+    [SerializeField] GameObject object1;
+    [SerializeField] GameObject object2;
+    //[SerializeField] GameObject object3;
+    //[SerializeField] GameObject object4;
     // Start is called before the first frame update
     void Start()
     {
-        time = 0;
+        while (boolean_game_strat == false)
+        {
+            StartCoroutine(game_start());
+            object1.SetActive(true);
+            object2.SetActive(true);
+            //object3.SetActive(true);
+            //object4.SetActive(true);
+        }
     }
-
-    // Update is called once per frame
-    void Update()
+    private IEnumerator game_start()
     {
-        time += Time.deltaTime;
-        if (time < 1f) return;
-        Map_update_object.map_formupdate[1, 1] = 10;
-        Map_update_object.map_formupdate[15, 1] = 10;
-        Map_update_object.map_formupdate[3, 8] = 10;
-
+        yield return null;
+        boolean_game_strat = true;
     }
 }
