@@ -10,7 +10,9 @@ public class Game_over : MonoBehaviour
     {
         var game_timer = Time_UI.time_counter;
         if ((int)game_timer > 0) return;
-
+        //以下からゲームオーバー中のメソッド
+        Game_end_loop.isgame_end_method();
+        //ゲームオーバーテキストの表示
         gameover_text.SetActive(true);
     }
 }

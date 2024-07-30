@@ -29,7 +29,6 @@ public class Map_start_object_genator : MonoBehaviour
             }
         }
         game_start = true;
-        Debug.Log(game_start);
     }
     private int[,] map_start_generate() //–À˜H¶¬ƒAƒ‹ƒSƒŠƒYƒ€
     {

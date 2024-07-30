@@ -1,14 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-
 
 
 public class Game_clear : MonoBehaviour
 {
-    [SerializeField] string start_scene_name = "start-scnen";
-
     [SerializeField] GameObject game_clear_object;
 
     private bool booleangame_start = false;
@@ -21,14 +17,13 @@ public class Game_clear : MonoBehaviour
     {
         if (!booleangame_start) return;
         GameObject[] _enemy_tag = GameObject.FindGameObjectsWithTag("Enemy");
+        var game_timer =(int) Time_UI.time_counter;
         //早期リターンによってネストを浅くする
-        if (_enemy_tag.Length != 0) return;
+        if (_enemy_tag.Length != 0||game_timer==0) return;
         //ゲームクリア時の処理
+        Game_end_loop.isgame_end_method();
+        //クリアオブジェクトを表示
         game_clear_object.SetActive(true);
-        if (Input.anyKeyDown)
-        {
-            SceneManager.LoadScene(start_scene_name);
-        }
     }
     private IEnumerator game_clear_stop()
     {
