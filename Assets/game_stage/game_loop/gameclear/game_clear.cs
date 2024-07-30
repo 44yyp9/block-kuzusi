@@ -6,6 +6,8 @@ using UnityEngine;
 public class Game_clear : MonoBehaviour
 {
     [SerializeField] GameObject game_clear_object;
+    [SerializeField] GameObject game_bgm;
+
 
     private bool booleangame_start = false;
 
@@ -21,7 +23,7 @@ public class Game_clear : MonoBehaviour
         //早期リターンによってネストを浅くする
         if (_enemy_tag.Length != 0||game_timer==0) return;
         //ゲームクリア時の処理
-        Game_end_loop.isgame_end_method();
+        Game_end_loop.isgame_end_method(game_bgm);
         //クリアオブジェクトを表示
         game_clear_object.SetActive(true);
     }

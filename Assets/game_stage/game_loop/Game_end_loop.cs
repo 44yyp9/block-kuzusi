@@ -6,8 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class Game_end_loop : MonoBehaviour
 {
-
-    public static void isgame_end_method()
+    public static void isgame_end_method(GameObject game_bgm)
     {
         //“GƒLƒƒƒ‰‚ÌÁ‹
         GameObject[] _enemy_tag = GameObject.FindGameObjectsWithTag("Enemy");
@@ -27,5 +26,6 @@ public class Game_end_loop : MonoBehaviour
         {
             SceneManager.LoadScene(start_scene_name);
         }
+        game_bgm.SetActive(false);
     }
 }
