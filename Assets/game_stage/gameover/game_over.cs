@@ -1,18 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Game_over : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] GameObject gameover_text;
+    private void Update()
     {
-        
-    }
+        var game_timer = Time_UI.time_counter;
+        if ((int)game_timer > 0) return;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        gameover_text.SetActive(true);
     }
 }
