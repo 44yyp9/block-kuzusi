@@ -792,6 +792,7 @@ GameObject:
   m_Component:
   - component: {fileID: 528928554}
   - component: {fileID: 528928555}
+  - component: {fileID: 528928556}
   m_Layer: 5
   m_Name: BGM_Slider
   m_TagString: Untagged
@@ -872,7 +873,32 @@ MonoBehaviour:
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 528928553}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &528928556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 528928553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e83456daa575644f9d25334209f9726, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bgm_slider: {fileID: 528928555}
 --- !u!1 &546973527
 GameObject:
   m_ObjectHideFlags: 0
@@ -1871,6 +1897,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1371014853}
   - component: {fileID: 1371014854}
+  - component: {fileID: 1371014855}
   m_Layer: 5
   m_Name: SE_Slider
   m_TagString: Untagged
@@ -1951,7 +1978,32 @@ MonoBehaviour:
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1371014852}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1371014855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1371014852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acb47ad380585044c901c0fd0b99bbea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  se_slider: {fileID: 1371014854}
 --- !u!1 &1371616135
 GameObject:
   m_ObjectHideFlags: 0
