@@ -12,7 +12,7 @@ public class Time_UI : MonoBehaviour
     [SerializeField] Text time_UI;
     void Start()
     {
-        time_counter = 120;
+        time_counter = 30;
     }
 
     void Update()
