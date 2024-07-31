@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Transmission_enemy : MonoBehaviour
+public class Get_inventroy : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()

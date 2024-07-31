@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player_move_calculation : MonoBehaviour
+public class Poison_forest_hierarchy : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()

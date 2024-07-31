@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Boleandigding : MonoBehaviour
+public class Scrolling_ites_UI : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
