@@ -21,10 +21,9 @@ public class Map_update_object : MonoBehaviour
 
     [SerializeField] bool startmethodend = true; //スタートメソッドが終わったことを知らせるbool
 
-    async Task reAsync()
+    async Task maptask()
     {
-        //非同期処理の概念からやらかしていると思われるので後に修正が必要
-        while (Map_start_object_genator.game_start)
+        while (map_formupdate == null)
         {
             map_formupdate = Map_start_object_genator.map_form;
             await Task.Delay(1);
@@ -32,7 +31,7 @@ public class Map_update_object : MonoBehaviour
     }
     private async void Start()
     {
-        await reAsync();
+        await maptask();
         startmethodend = false;
     }
 
