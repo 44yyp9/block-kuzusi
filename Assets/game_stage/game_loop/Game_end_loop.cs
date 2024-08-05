@@ -27,5 +27,7 @@ public class Game_end_loop : MonoBehaviour
             SceneManager.LoadScene(start_scene_name);
         }
         game_bgm.SetActive(false);
+        Map_start_object_genator.map_form = null;
+        Map_update_object.map_formupdate = null;
     }
 }
