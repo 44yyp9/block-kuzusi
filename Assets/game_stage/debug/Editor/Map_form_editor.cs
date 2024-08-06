@@ -13,6 +13,7 @@ public class Map_form_editor : EditorWindow
     private const int first_posi_y = 10;
 
     private int[,] mapform;
+    [Serialize] GameObject game_bgm;
 
     [MenuItem("tools/Mapwindow")]
     public static void create_window()
@@ -99,6 +100,7 @@ public class Map_form_editor : EditorWindow
         Rect buttonRect = new Rect(10, 200, 100, 30);
         if (GUI.Button(buttonRect, "Restart Game"))
         {
+            Game_end_loop.Initialise_map();
             string current_scenename = SceneManager.GetActiveScene().name;
             SceneManager.LoadScene(current_scenename);
         }
