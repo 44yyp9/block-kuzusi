@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class Player_downstair : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private Player_movig_stair movig_stair;
+    private void Start()
     {
-        
+        movig_stair=GetComponent<Player_movig_stair>();
     }
-
-    // Update is called once per frame
     void Update()
     {
-        
+        movig_stair.move_stair(Map_update_object.exit_stair_num, -1);
     }
 }
