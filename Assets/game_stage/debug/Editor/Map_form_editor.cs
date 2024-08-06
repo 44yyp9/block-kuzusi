@@ -4,6 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEditor;
 using System.Threading.Tasks;
+using UnityEngine.SceneManagement;
 
 public class Map_form_editor : EditorWindow
 {
@@ -29,6 +30,7 @@ public class Map_form_editor : EditorWindow
         mapform = Map_update_object.map_formupdate;
         isaxis_Label();
         isMapposition_cretae();
+        restart_button();
     }
     private void isaxis_Label() //xé≤Ç∆yé≤ÇÃçÏê¨
     {
@@ -70,6 +72,8 @@ public class Map_form_editor : EditorWindow
                 create_numbercolor(Map_update_object.hole_size_4_num, Color.yellow);
                 create_numbercolor(Map_update_object.hole_size_3_num, Color.yellow);
                 create_numbercolor(Map_update_object.hole_size_2_num, Color.yellow);
+                create_numbercolor(Map_update_object.inlet_stair_num, Color.red);
+                create_numbercolor(Map_update_object.exit_stair_num, Color.cyan);
             }
         }
         void create_numbercolor(int num,Color color) //èÍçáï™ÇØÇ∆ÇªÇÃÇ∆Ç´ÇÃêFÇÃàµÇ¢
@@ -88,6 +92,15 @@ public class Map_form_editor : EditorWindow
         while (Map_update_object.map_formupdate == null)
         {
             await Task.Delay(1);
+        }
+    }
+    void restart_button()
+    {
+        Rect buttonRect = new Rect(10, 200, 100, 30);
+        if (GUI.Button(buttonRect, "Restart Game"))
+        {
+            string current_scenename = SceneManager.GetActiveScene().name;
+            SceneManager.LoadScene(current_scenename);
         }
     }
 }
