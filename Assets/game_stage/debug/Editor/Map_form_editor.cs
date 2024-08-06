@@ -32,6 +32,7 @@ public class Map_form_editor : EditorWindow
         isaxis_Label();
         isMapposition_cretae();
         restart_button();
+        select_hierarchy();
     }
     private void isaxis_Label() //x軸とy軸の作成
     {
@@ -95,7 +96,7 @@ public class Map_form_editor : EditorWindow
             await Task.Delay(1);
         }
     }
-    void restart_button()
+    void restart_button() //リスタートのメソッド
     {
         Rect buttonRect = new Rect(10, 200, 100, 30);
         if (GUI.Button(buttonRect, "Restart Game"))
@@ -103,6 +104,35 @@ public class Map_form_editor : EditorWindow
             Game_end_loop.Initialise_map();
             string current_scenename = SceneManager.GetActiveScene().name;
             SceneManager.LoadScene(current_scenename);
+        }
+    }
+    void select_hierarchy()
+    {
+        Rect hierarchy_message = new Rect(150, 200, 100, 30);
+        GUI.Label(hierarchy_message, "現在の階層 : ");
+        var _now_hierarchy = Map_update_object.hierarchy_num;
+        var _hierarchy = _now_hierarchy.ToString();
+        if (_now_hierarchy < 0)
+        {
+            _now_hierarchy *= -1;
+            _hierarchy = "B" + _now_hierarchy.ToString();
+        }
+        Rect _hierarchy_bt = new Rect(250, 200, 30, 30);
+        GUI.Label(_hierarchy_bt,_hierarchy);
+        Rect upbutton = new Rect(290, 200, 30, 30);
+        Rect downbutton = new Rect(320, 200, 30, 30);
+        Rect start_hierarchy_bt = new Rect(280, 230, 80, 30);
+        if (GUI.Button(upbutton, "↑"))
+        {
+            Map_update_object.hierarchy_num += 1;
+        }
+        if (GUI.Button(downbutton, "↓"))
+        {
+            Map_update_object.hierarchy_num -= 1;
+        }
+        if (GUI.Button(start_hierarchy_bt, "B1階にする"))
+        {
+            Map_update_object.hierarchy_num = -1;
         }
     }
 }

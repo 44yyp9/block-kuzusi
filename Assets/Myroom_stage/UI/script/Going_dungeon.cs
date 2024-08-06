@@ -8,7 +8,7 @@ public class Going_dungeon : MonoBehaviour
     [SerializeField] string scene_name = "SampleScene";
     public void go_dungeon()
     {
-        Map_update_object.hierarchy_num = 0;
+        Map_update_object.hierarchy_num = 1;
         SceneManager.LoadScene(scene_name);
     }
 }
