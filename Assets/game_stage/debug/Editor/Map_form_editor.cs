@@ -133,6 +133,8 @@ public class Map_form_editor : EditorWindow
         if (GUI.Button(start_hierarchy_bt, "B1ŠK‚É‚·‚é"))
         {
             Map_update_object.hierarchy_num = -1;
+            Map_generate_stair.unitlHierarchy_list = new List<int>();
+            Map_generate_stair.unitlHierarchy_list.Add(Map_update_object.hierarchy_num);
         }
     }
 }

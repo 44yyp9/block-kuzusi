@@ -17,6 +17,7 @@ public class Player_movig_stair : MonoBehaviour
             {
                 if (up_or_down < -1 || up_or_down > 1 || up_or_down == 0) return; //ÉKÅ[Éhêﬂ
                 Map_update_object.hierarchy_num += up_or_down;
+                Map_generate_stair.unitlHierarchy_list.Add(Map_update_object.hierarchy_num);
                 Game_end_loop.Initialise_map();
                 string current_scenename = SceneManager.GetActiveScene().name;
                 SceneManager.LoadScene(current_scenename);
