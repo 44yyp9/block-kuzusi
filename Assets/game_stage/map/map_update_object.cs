@@ -8,6 +8,7 @@ public class Map_update_object : MonoBehaviour
 {
     //playerは10　enemyは-10 wallは1　何もないスペースは0 穴は5 穴のサイズ大きいほうから4,3,2とする
     //exit_stairは7 inlet_stairは -7
+    public static int hierarchy_num; //ゲームの現在の階層を表す数値 //さらにダンジョンに変わるシーン遷移の処理で0にする
     public const int enemy_num = -10;
     public const int play_num = 10;
     public const int wall_num = 1;
